@@ -1,0 +1,46 @@
+body {
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+footer {
+  font-size: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+li { 
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+ul {
+  font-size: 20px;
+  margin: 0;
+  padding: 5px;
+}
+
+.current-temp {
+  font-size: 60px;
+}
+
+.units {
+  position: relative;
+  top: -28px;
+}
+
+.weather-app {
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgb(165, 137, 141);
+  padding: 23px;
+}
+
+.weather-app-wrapper {
+   max-width: 850px;
+  margin: 40px auto;
+}

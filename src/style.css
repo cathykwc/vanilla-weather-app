@@ -27,7 +27,11 @@ ul {
   font-size: 60px;
 }
 
-.units {
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temperature .units {
   font-size: 20px;
   position: relative;
   top: -28px;
@@ -42,6 +46,12 @@ ul {
 }
 
 .weather-app-wrapper {
-   max-width: 850px;
+  max-width: 700px;
   margin: 40px auto;
+}
+
+.weather-temperature img {
+  margin-right: 15px;
+  height: 75px;
+  width: 75px;
 }

@@ -23,7 +23,6 @@ function formatDate(timestamp) {
 
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -32,6 +31,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let feelsLikeElement = document.querySelector("#feels-like");
   let dateElement = document.querySelector("#date");
+  
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;

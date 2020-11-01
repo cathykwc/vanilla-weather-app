@@ -27,12 +27,15 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement= document.querySelector("#humidity");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  
   let windElement = document.querySelector("#wind");
   let feelsLikeElement = document.querySelector("#feels-like");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -55,7 +58,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Vancouver");
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement= document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form"); 
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#f-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#c-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+search("Vancouver");

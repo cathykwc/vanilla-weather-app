@@ -3,26 +3,50 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css">
-    <title>Weather App</title>
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"
+    />
+    <link 
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" 
+    rel="stylesheet">
+    <script 
+    src="https://unpkg.com/axios/dist/axios.min.js">
+    </script>
+    <link 
+    rel="stylesheet" 
+    href="src/style.css">
+    <title>
+      Weather App
+    </title>
   </head>
   <body>
     <div class="container">
     <div class="weather-app-wrapper">
       <div class="weather-app">
-      <form id="search-form" class="mb-4">
+      <form 
+      id="search-form" 
+      class="mb-4">
         <div class="row">
             <div class="col-5">
-            <input type="search" placeholder="Search for a city" class="form-control" autofocus="on" autocomplete="off" id="city-input" />
+            <input 
+            type="search" 
+            placeholder="Search for a city" 
+            class="form-control" 
+            autofocus="on" 
+            autocomplete="off" 
+            id="city-input" />
             </div>
             <div class="col-2">
-              <button id="search-button">search</button>
+              <button id="search-button">
+                search
+              </button>
             </div>
             <div class="col-5">
-              <button id="current-location-button">current location</button>
+              <button id="current-location-button">
+                current location
+              </button>
             </div>
         </div>
       </form>
@@ -32,7 +56,9 @@
     <ul>
       <li id="description">
       </li>
-      <li>Last updated: <span id="date"></span>
+      <li>Last updated: 
+        <span id="date">
+        </span>
       </li>
     </ul>
     </div>
@@ -63,7 +89,11 @@
 
   </div>
   </div>
-  <footer><a href="https://github.com/cathykwc/vanilla-weather-app" target="_blank">Open-source code</a> by Cathy Chan
+  <footer>
+    <a 
+    href="https://github.com/cathykwc/vanilla-weather-app" target="_blank">
+    Open-source code
+  </a> by Cathy Chan
   </footer>
 </div>
   <script src="src/app.js">

@@ -27,27 +27,17 @@ function formatHours (timestamp) {
 }
 
 function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#description");
-  let humidityElement= document.querySelector("#humidity");
-  
-  let windElement = document.querySelector("#wind");
-  let feelsLikeElement = document.querySelector("#feels-like");
-  let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
-
   celsiusTemperature = response.data.main.temp;
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#feels-like").innerHTML = Math.round(response.data.main.feels_like);
+  document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#icon").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 }
 
 function displayForecast(response) {

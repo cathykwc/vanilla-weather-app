@@ -82,6 +82,20 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function searchLocation(location) {
+  let lat = location.coords.latitude;
+  let lon = location.coords.longitude;
+  let units = "metric";
+  let apiKey = "145ee08408729673b53d671c97d81b6d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);  
+}
+
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -110,4 +124,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#c-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 search("Vancouver");

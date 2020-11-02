@@ -2,6 +2,26 @@ a:hover {
   text-decoration: none;
 }
 
+button {
+        border: 1px solid black;
+        border-radius: 4px;
+        background: none;
+        color: black;
+        display: block;
+        font-size: 15px;
+        margin: 0 auto;
+        padding: 8px 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+  button:hover {
+        background: black;
+        box-shadow: none;
+        color: white;
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
 body {
   font-family: 'PT Sans Caption', sans-serif;
 }
@@ -9,6 +29,7 @@ body {
 footer {
   font-size: 20px;
   text-align: center;
+
 }
 
 h1 {
@@ -63,16 +84,16 @@ ul {
 }
 
 .weather-app-wrapper {
-  max-width: 700px;
-  margin: 40px auto;
+  max-width: 550px;
+  margin: 40px auto 15px auto;
 }
 
 .weather-temperature img {
-  margin-right: 25px;
-  height: 150px;
-  width: 150px;
+  margin-right: 10px;
+  height: 100px;
+  width: 100px;
   position: relative;
-  top: -28px;
+  top: -10px;
 }
 
 .weather-temperature .active {
@@ -81,23 +102,23 @@ ul {
 }
 
 .weather-forecast {
-  margin-top: 10px;
+  margin-top: 50px;
 }
 
 .weather-forecast h3 {
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 }
 
 .weather-forecast img {
   display: block;
   margin: 0 auto;
-  height: 75px;
-  width: 75px;
+  height: 65px;
+  width: 65px;
 }
 
 .weather-forecast-temperature {
   color: black;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
 }

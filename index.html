@@ -15,14 +15,14 @@
       <div class="weather-app">
       <form id="search-form" class="mb-4">
         <div class="row">
-            <div class="col-4">
-              <input type="text" placeholder="Enter a city..." class="form-control shadow border-0" id="city-input" autocomplete="off" />
+            <div class="col-5">
+            <input type="search" placeholder="Search for a city" class="form-control" autofocus="on" autocomplete="off" id="city-input" />
             </div>
-            <div class="col-3">
-              <input type="submit" value="search" class="form-control btn btn-outline-dark" id="search-button" />
+            <div class="col-2">
+              <button id="search-button">search</button>
             </div>
             <div class="col-5">
-              <input type="submit" value="current location" class="form-control btn btn-outline-dark" id="current-location-button" />
+              <button id="current-location-button">current location</button>
             </div>
         </div>
       </form>
@@ -37,7 +37,7 @@
     </ul>
     </div>
     <div class="row">
-      <div class="col-6">
+      <div class="col-7">
         <div class="clearfix weather-temperature">
         <img src="" alt="" class="float-left" id="icon"/>
         <div class="float-left">
@@ -48,7 +48,7 @@
         </div>
      </div>
     </div>
-    <div class="col-6">
+    <div class="col-5">
       <ul>
         <li>Feels like: <span id="feels-like"></span>°C</li>
         <li>Humidity: <span id="humidity"></span>%</li>

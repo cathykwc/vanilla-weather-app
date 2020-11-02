@@ -39,11 +39,6 @@ ul {
   font-size: 60px;
 }
 
-.forecast-icon {
-  display: block;
-  margin: auto;
-}
-
 .forecast-temperature {
   font-size: 20px;
   text-align: center; 
@@ -73,9 +68,11 @@ ul {
 }
 
 .weather-temperature img {
-  margin-right: 15px;
-  height: 75px;
-  width: 75px;
+  margin-right: 25px;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top: -28px;
 }
 
 .weather-temperature .active {
@@ -83,3 +80,24 @@ ul {
   cursor: default;
 }
 
+.weather-forecast {
+  margin-top: 10px;
+}
+
+.weather-forecast h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 75px;
+  width: 75px;
+}
+
+.weather-forecast-temperature {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}

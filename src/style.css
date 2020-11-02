@@ -56,9 +56,13 @@ ul {
   padding: 5px;
 }
 
+.current-location {
+  padding: 30px;
+}
 .current-temp {
   font-size: 60px;
 }
+
 
 .forecast-temperature {
   font-size: 20px;

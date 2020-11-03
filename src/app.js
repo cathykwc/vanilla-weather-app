@@ -74,6 +74,7 @@ axios.get(apiUrl).then(displayTemperature);
 
 apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayForecast);
+
 }
 
 function handleSubmit(event) {
@@ -89,6 +90,11 @@ function searchLocation(location) {
   let apiKey = "145ee08408729673b53d671c97d81b6d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(displayForecast);
+
 }
 
 function getCurrentLocation(event) {
@@ -126,4 +132,5 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
 search("Vancouver");
